@@ -4,14 +4,13 @@ var flkty = new Flickity( elem, {
   cellAlign: 'left',
   contain: true,
   pageDots: false,
-  hash: true,
+  hash: true
 });
+
 
 // element argument can be a selector string
 //   for an individual element
-var flkty = new Flickity( '.main-carousel', {
 
-});
 
 var progressBar = document.querySelector('.progress-bar')
 flkty.on( 'scroll', function( progress ) {
