@@ -7,3 +7,6 @@
 .restart { position: absolute; top: 0; left: 0; }
 
 .progress-bar { height: 20px; width: 0; background: #333; }
+
+@media (max-width: 768px) { .carousel-cell .container { max-width: 300px; }
+  .carousel-cell .container h3 { font-size: 19px; } }

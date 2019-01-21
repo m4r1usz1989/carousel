@@ -29,3 +29,14 @@
   width: 0;
   background: #333;
 }
+
+@media (max-width: 768px) {
+	.carousel-cell {
+		.container {
+			max-width: 300px;
+			h3 {
+				font-size: 19px;
+			}
+		}
+	}
+}
