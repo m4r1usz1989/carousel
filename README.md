@@ -1,2 +1,3 @@
 # carousel
-Flickity
+
+https://mariusz-domanski.github.io/carousel/
