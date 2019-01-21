@@ -4,7 +4,7 @@ var flkty = new Flickity( elem, {
   cellAlign: 'left',
   contain: true,
   pageDots: false,
-  hash: true
+  hash: true,
 });
 
 
