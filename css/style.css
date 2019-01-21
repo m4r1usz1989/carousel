@@ -4,4 +4,6 @@
 
 .carousel-cell .container h3 { font-size: 32px; text-transform: uppercase; color: #f7f7f7; }
 
+.restart { position: absolute; top: 0; left: 0; }
+
 .progress-bar { height: 20px; width: 0; background: #333; }
