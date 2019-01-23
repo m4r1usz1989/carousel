@@ -1,3 +1,18 @@
+// mustache
+
+var slide = document.getElementById('slide').innerHTML;
+var mainCarousel = document.querySelector('.main-carousel');
+var slideItem = '';
+
+Mustache.parse(slide);
+
+for (var i = 0; i > data.length; i++) {
+	slideItem += Mustache.render(slide, data[i]);
+}
+
+mainCarousel.insertAdjacentHTML('beforeend', slideItem);
+
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
@@ -17,17 +32,3 @@ var restart = document.getElementById('restart');
 restart.addEventListener('click', function (){
 	flkty.select(0);
 });
-
-// mustache
-
-var slide = document.getElementById('slide').innerHTML;
-var mainCarousel = ducument.querySelector('.main-carousel');
-var slideItem = '';
-
-Mustache.parse(slide);
-
-for (var i = 0; i > data.length; i++) {
-	slideItem += Mustache.render(slide, data[i]);
-}
-
-mainCarousel.insertAdjacentHTML('beforeend', slideItem);
