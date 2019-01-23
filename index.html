@@ -14,37 +14,16 @@
 
 <!-- carousel -->
 <div class="main-carousel">
-	<!-- slide 1 -->
-	<div class="carousel-cell" style="background-image: url('images/s1.jpg');" id="carousel-cell1">
-		<div class="container">
-			<h3>Lorem ipsum dolor sit amet enim</h3>
-		</div>
-	</div>
-	<!-- slide 2 -->
-	<div class="carousel-cell" style="background-image: url('images/s2.jpg');" id="carousel-cell2">
-		<div class="container">
-			<h3>Lorem ipsum dolor sit amet enim</h3>
-		</div>
-	</div>
-	<!-- slide 3 -->
-	<div class="carousel-cell" style="background-image: url('images/s3.jpg');" id="carousel-cell3">
-		<div class="container">
-			<h3>Lorem ipsum dolor sit amet enim</h3>
-		</div>
-	</div>
-	<!-- slide 4 -->
-	<div class="carousel-cell" style="background-image: url('images/s4.jpg');" id="carousel-cell4">
-		<div class="container">
-			<h3>Lorem ipsum dolor sit amet enim</h3>
-		</div>
-	</div>
-	<!-- slide 5 -->
-	<div class="carousel-cell" style="background-image: url('images/s5.jpg');" id="carousel-cell5">
-		<div class="container">
-			<h3>Lorem ipsum dolor sit amet enim</h3>
-		</div>
-	</div>
 </div>
+	<!-- slide 1 -->
+	<script id="slide" type="x-tmpl-mustache">
+		<div class="carousel-cell" style="background-image: url({{image}});" id="carousel-cell1">
+			<div class="container">
+					<h3>{{title}}</h3>
+					{{{description}}}
+			</div>
+		</div>
+	</script>
 
 <div class="progress-bar"></div>
 <div class="restart">
@@ -52,38 +31,37 @@
 </div>
 
 <script>
-	var slides = [
+	var data = [
 		{
 			image: 'images/s1.jpg',
 			title: 'Lorem ipsum dolor sit amet enim',
-			description: 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. '
-		}
+			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>'
+		},
 		{
 			image: 'images/s2.jpg',
 			title: 'Lorem ipsum dolor sit amet enim',
-			description: 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. '
-		}
+			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>'
+		},
 		{
 			image: 'images/s3.jpg',
 			title: 'Lorem ipsum dolor sit amet enim',
-			description: 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. '
-		}
+			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>'
+		},
 		{
 			image: 'images/s4.jpg',
 			title: 'Lorem ipsum dolor sit amet enim',
-			description: 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. '
-		}
+			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>'
+		},
 		{
 			image: 'images/s5.jpg',
 			title: 'Lorem ipsum dolor sit amet enim',
-			description: 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. '
+			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>'
 		}
 	];
 </script>
-	
+<script src="vendor/mustache.min.js"></script>
 <script src="vendor/flickity.pkgd.min.js"></script>
 <script src="vendor/hash.js"></script>
-<script src="vendor/mustache.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
