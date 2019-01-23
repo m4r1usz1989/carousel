@@ -1,3 +1,6 @@
+'use strict';
+(function(){ 
+
 // mustache
 
 var slide = document.getElementById('slide').innerHTML;
@@ -6,7 +9,7 @@ var slideItem = '';
 
 Mustache.parse(slide);
 
-for (var i = 0; i > data.length; i++) {
+for (var i = 0; i < data.length; i++) {
 	slideItem += Mustache.render(slide, data[i]);
 }
 
@@ -32,3 +35,5 @@ var restart = document.getElementById('restart');
 restart.addEventListener('click', function (){
 	flkty.select(0);
 });
+
+})();
