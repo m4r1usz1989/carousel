@@ -36,7 +36,6 @@ restart.addEventListener('click', function (){
 	flkty.select(0);
 });
 
-})();
 
 // google map
 	window.initMap = function() {
@@ -47,10 +46,18 @@ restart.addEventListener('click', function (){
 
 		var markers = [];
 
-		for(var i = 0; i < data.length; i++) {
+		for (var i = 0; i < data.length; i++) {
+			// dodawanie markera
 			markers[i] = new google.maps.Marker({
 				position: data[i].coords,
 				map: map
 			});
+			// dodawanie klikacza
+			markers[i].addListener('click', (function (i) {
+    			return function () {
+        			flkty.selectCell(i);
+    			}
+			})(i));
 		}
 	}
+})();
