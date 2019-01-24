@@ -37,3 +37,20 @@ restart.addEventListener('click', function (){
 });
 
 })();
+
+// google map
+	window.initMap = function() {
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 6,
+			center: data[0].coords
+		});
+
+		var markers = [];
+
+		for(var i = 0; i < data.length; i++) {
+			markers[i] = new google.maps.Marker({
+				position: data[i].coords,
+				map: map
+			});
+		}
+	}

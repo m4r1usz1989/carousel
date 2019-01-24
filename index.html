@@ -30,37 +30,61 @@
 	<button id="restart">Restart</button>
 </div>
 
+<!-- google map -->
+<div id="map">
+</div>
+
 <script>
 	var data = [
 		{
 			image: 'images/s1.jpg',
-			title: '<h3>Lorem ipsum dolor sit amet enim 1</h3>',
+			title: '<h3>Warszawa</h3>',
 			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>',
-			carouselcell: 'carousel-cell1'
+			carouselcell: 'carousel-cell1',
+			coords: {
+				lat: 52.2319237,
+				lng: 21.0067265
+			}
 		},
 		{
 			image: 'images/s2.jpg',
-			title: '<h3>Lorem ipsum dolor sit amet enim 2</h3>',
+			title: '<h3>Kraków</h3>',
 			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>',
-			carouselcell: 'carousel-cell2'
+			carouselcell: 'carousel-cell2',
+			coords: {
+				lat: 50.0619474,
+				lng: 19.9368564
+			}
 		},
 		{
 			image: 'images/s3.jpg',
-			title: '<h3>Lorem ipsum dolor sit amet enim 3</h3>',
+			title: '<h3>Bydgoszcz</h3>',
 			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>',
-			carouselcell: 'carousel-cell3'
+			carouselcell: 'carousel-cell3',
+			coords: {
+				lat: 53.1219648,
+				lng: 18.0002529
+			}
 		},
 		{
 			image: 'images/s4.jpg',
-			title: '<h3>Lorem ipsum dolor sit amet enim 4</h3>',
+			title: '<h3>Poznań</h3>',
 			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>',
-			carouselcell: 'carousel-cell4'
+			carouselcell: 'carousel-cell4',
+			coords: {
+				lat: 52.4082663,
+				lng: 16.9335199
+			}
 		},
 		{
 			image: 'images/s5.jpg',
-			title: '<h3>Lorem ipsum dolor sit amet enim 5</h3>',
+			title: '<h3>Gdańsk</h3>',
 			description: '<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>',
-			carouselcell: 'carousel-cell5'
+			carouselcell: 'carousel-cell5',
+			coords: {
+				lat: 54.347629,
+				lng: 18.6452324
+			}
 		}
 	];
 </script>
@@ -68,5 +92,6 @@
 <script src="vendor/flickity.pkgd.min.js"></script>
 <script src="vendor/hash.js"></script>
 <script src="js/script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlc_tgLaNH_ET79J6_4Gbwae-6EzBd31E&callback=initMap"></script>
 </body>
 </html>

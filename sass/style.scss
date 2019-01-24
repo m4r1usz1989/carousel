@@ -33,6 +33,11 @@
   background: #333;
 }
 
+#map {
+  height: 50vh;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
 	.carousel-cell {
 		.container {
