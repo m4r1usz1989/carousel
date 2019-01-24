@@ -59,5 +59,9 @@ restart.addEventListener('click', function (){
     			}
 			})(i));
 		}
+		flkty.on('change', function(i){
+			map.panTo(data[i].coords);
+			map.setZoom(8);
+		});
 	}
 })();
