@@ -1,12 +1,15 @@
 'use strict';
 (function(){ 
+
 	// mustache
+
 	var slide = document.getElementById('slide').innerHTML;
 	var mainCarousel = document.querySelector('.main-carousel');
 	var slideItem = '';
 
 	Mustache.parse(slide);
-	for(var i = 0; i < data.length; i++) {
+
+	for (var i = 0; i < data.length; i++) {
 		slideItem += Mustache.render(slide, data[i]);
 	}
 
@@ -16,9 +19,9 @@
 	var flkty = new Flickity( elem, {
 		// options
 		cellAlign: 'left',
-		contain: true,
-		pageDots: false,
-		hash: true,
+	  	contain: true,
+	  	pageDots: false,
+	  	hash: true,
 	});
 
 	var progressBar = document.querySelector('.progress-bar')
@@ -31,21 +34,27 @@
 	restart.addEventListener('click', function (){
 		flkty.select(0);
 	});
-	
-})();
 
-// google map
-window.initMap = function() {
-	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 6,
-		center: data[0].coords
-	});
-
-	var markers = [];
-	for(var i = 0; i < data.length; i++) {
-		markers[i] = new google.maps.Marker({
-			position: data[i].coords,
-			map: map
+	// google map
+	window.initMap = function() {
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 6,
+			center: data[0].coords
 		});
+
+		var markers = [];
+
+		for(var i = 0; i < data.length; i++) {
+			markers[i] = new google.maps.Marker({
+				position: data[i].coords,
+				map: map
+			});
+
+			markers[i].addListener('click', (function (i) {
+	    		return function () {
+	        	flkty.selectCell(i);
+	    		}
+			})(i));
+		}
 	}
-}
+})();
